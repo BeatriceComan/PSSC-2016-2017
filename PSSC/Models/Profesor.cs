@@ -6,55 +6,49 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Profesor: Persoana
+    class Profesor
     {
-        string titluP;
-        string emailP;
-        string paginaWebP;
+        private string numeProfesor;
+        private List<Disciplina> listaDisciplineDetinute = new List<Disciplina>();
 
-        public string TitluP
-        {
-
-            get
-            {
-                return titluP;
-            }
-            set
-            {
-                titluP = value;
-            }
-        }
-
-        public string EmailP
+        public string NumeProfesor
         {
             get
             {
-                return emailP;
+                return numeProfesor;
             }
             set
             {
-                emailP = value;
+                numeProfesor = value;
             }
         }
 
-        public string PaginaWebP
+        public List<Disciplina> ListaDisciplineDetinute
         {
             get
             {
-                return paginaWebP;
+                return listaDisciplineDetinute;
             }
             set
             {
-                paginaWebP = value;
+                listaDisciplineDetinute = value;
             }
         }
 
-        public Profesor(string numeU, string paginaWebU, string numeF, string adresaF, string telefonF, string faxF, string emailF, string paginaWebF, string numeP, string prenumeP, int varstaP, string sexP, string cnpP, string telefonP, string titluP, string emailP, string paginaWebP)
-            : base(numeU, paginaWebU, numeF, adresaF, telefonF, faxF, emailF, paginaWebF, numeP, prenumeP, varstaP, sexP, cnpP, telefonP)
+        public Profesor(string numeProfesor, List<Disciplina> listaDisciplineDetinute)
         {
-            this.titluP = titluP;
-            this.emailP = emailP;
-            this.paginaWebP = paginaWebP;
+            this.numeProfesor = numeProfesor;
+            this.listaDisciplineDetinute = listaDisciplineDetinute;
+        }
+
+        void adugareNoteExamen(Examen ex)
+        {
+            //
+        }
+
+        void adaugareNoteDistribuita(Distribuita di)
+        {
+            //
         }
     }
 }

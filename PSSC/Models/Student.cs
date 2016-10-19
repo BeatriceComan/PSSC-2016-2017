@@ -6,83 +6,68 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    class Student: Persoana
+    class Student: An
     {
-        string nrMatricol;
-        string adresaS;
-        int anDeStudiu;
-        bool plataS;
-        bool bursaS;
+        private string numeStudent;
+        private int nrTotalCredite;
+        private bool promovat;
+        private List<Disciplina> disciplineFrecventate = new List<Disciplina>();
 
-        public string NrMatricol
-        {
-
-            get
-            {
-                return nrMatricol;
-            }
-            set
-            {
-                nrMatricol = value;
-            }
-        }
-
-        public string AdresaS
+        public string NumeStudent
         {
             get
             {
-                return adresaS;
+                return numeStudent;
             }
             set
             {
-                adresaS = value;
+                numeStudent = value;
             }
         }
 
-        public int AnDeStudiu
+        public int NrTotalCredite
         {
             get
             {
-                return anDeStudiu;
+                return nrTotalCredite;
             }
             set
             {
-                anDeStudiu = value;
+                nrTotalCredite = value;
             }
         }
 
-        public bool PlataS
+        public bool Promovat
         {
             get
             {
-                return plataS;
+                return promovat;
             }
             set
             {
-                plataS = value;
+                promovat = value;
             }
         }
 
-        public bool BursaS
+        public List<Disciplina> DisciplineFrecventate
         {
             get
             {
-                return bursaS;
+                return disciplineFrecventate;
             }
             set
             {
-                bursaS = value;
+                disciplineFrecventate = value;
             }
         }
 
-        public Student(string numeU, string paginaWebU, string numeF, string adresaF, string telefonF, string faxF, string emailF, string paginaWebF, string numeP, string prenumeP, int varstaP, string sexP, string cnpP, string telefonP, string nrMatricol, string adresaS, int anDeStudiu, bool plataS, bool bursaS)
-            : base(numeU, paginaWebU, numeF, adresaF, telefonF, faxF, emailF, paginaWebF, numeP, prenumeP, varstaP, sexP, cnpP, telefonP)
+        public Student(EnumAnStudiu anStudiu, string numeStudent, int nrTotalCredite, bool promovat, List<Disciplina> disciplineFrecventate)
+            : base(anStudiu)
         {
-            this.nrMatricol = nrMatricol;
-            this.adresaS = adresaS;
-            this.anDeStudiu = anDeStudiu;
-            this.plataS = plataS;
-            this.bursaS = bursaS;
+            this.numeStudent = numeStudent;
+            this.nrTotalCredite = nrTotalCredite;
+            this.promovat = promovat;
+            this.disciplineFrecventate = disciplineFrecventate;
         }
     }
 }
