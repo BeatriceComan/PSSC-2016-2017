@@ -1,0 +1,46 @@
+﻿@model WebApplication4.Models.MainModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+
+</head>
+<body style="background-color:powderblue;">
+    <center><h3>Online campus</h3></center>
+    <div style="margin:0 auto; text-align: center; border: 2px; border-style: solid; width:400px;background-color:bisque">
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td>@Html.LabelFor(m => m.login.RegNumber)</td> @*Label to display registration number*@
+                    <td>@Html.TextBoxFor(m => m.login.RegNumber)</td> @*Textbox for user input*@
+
+                    <td>@Html.ValidationMessageFor(m => m.login.RegNumber)</td> @*Show validation error (if any) on form submission*@
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(m => m.login.Password)</td> @*Label for pasword*@
+                    <td>@Html.PasswordFor(m => m.login.Password)</td> @*Password box for inputting password*@
+                    <td>@Html.ValidationMessageFor(m => m.login.Password)</td> @*Show validation errors(if any) on form submission*@
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Submit" />
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        @ViewBag.Message
+                    </td>
+                </tr>
+            </table>
+        }
+    </div>
+</body>
+</html>
+

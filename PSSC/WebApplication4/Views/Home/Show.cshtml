@@ -1,0 +1,27 @@
+﻿@model WebApplication4.Models.MainModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Show</title>
+</head>
+<body style="background-color:powderblue;">
+    <div>
+        <center><h3>Welcome @Model.login.RegNumber</h3></center> @*Show the registration number of the user who is logged in.*@
+    </div>
+    
+    <table border="1" align="center" bgcolor="yellow">
+        <caption>Enrolled Subjects</caption>
+        @foreach (System.Data.DataRow dr in ViewBag.SubjectsList.Rows)
+        {
+            <tr>
+                <td>@dr["Name"].ToString()</td>
+            </tr>
+        }
+       
+    </table>
+</body>
+</html>

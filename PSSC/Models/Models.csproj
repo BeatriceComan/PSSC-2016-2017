@@ -31,7 +31,17 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,34 +50,39 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Deanship\IReportPublisher.cs" />
-    <Compile Include="Models\Deanship\StudyYear.cs" />
-    <Compile Include="Models\Deanship\StudyYearFactory.cs" />
-    <Compile Include="Models\Generics\Value Objects\Attendence.cs" />
-    <Compile Include="Models\Generics\Value Objects\Credits.cs" />
-    <Compile Include="Models\Generics\Exceptions\ArgumentCannotBeEmptyStringException.cs" />
-    <Compile Include="Models\Generics\Exceptions\InvalidCreditsValue.cs" />
-    <Compile Include="Models\Generics\Exceptions\NotEnoughGradesException.cs" />
-    <Compile Include="Models\Generics\Value Objects\Grade.cs" />
-    <Compile Include="Models\Generics\Value Objects\PlainText.cs" />
-    <Compile Include="Models\Generics\Value Objects\Proportion.cs" />
-    <Compile Include="Models\Generics\Value Objects\RegistrationNumber.cs" />
-    <Compile Include="Models\Professor\Professor.cs" />
-    <Compile Include="Models\Professor\Subjects.cs" />
-    <Compile Include="Models\Professor\SubjectsFactory.cs" />
-    <Compile Include="Models\Student\GradeReportFactory.cs" />
+    <Compile Include="Common\Subject\ViewableSituation.cs" />
+    <Compile Include="Contexts\Deanship\DefinedSubject.cs" />
+    <Compile Include="Contexts\Deanship\IReportPublisher.cs" />
+    <Compile Include="Contexts\Deanship\StudyYear.cs" />
+    <Compile Include="Contexts\Deanship\StudyYearFactory.cs" />
+    <Compile Include="Contexts\Professor\GradeableSituation.cs" />
+    <Compile Include="Contexts\Professor\SubjectsFactory.cs" />
+    <Compile Include="Contexts\Professor\TeachingSubject.cs" />
+    <Compile Include="Contexts\Student\EnrolledSubject.cs" />
+    <Compile Include="Contexts\Student\GradeReportFactory.cs" />
+    <Compile Include="Generics\Entity.cs" />
+    <Compile Include="Generics\Exceptions\InvalidCreditsValueException.cs" />
+    <Compile Include="Generics\Exceptions\InvalidGradeValueException.cs" />
+    <Compile Include="Generics\Exceptions\HighNumeratorException.cs" />
+    <Compile Include="Generics\ValueObjects\Attendence.cs" />
+    <Compile Include="Generics\ValueObjects\Credits.cs" />
+    <Compile Include="Generics\ValueObjects\Grade.cs" />
+    <Compile Include="Generics\ValueObjects\PlainText.cs" />
+    <Compile Include="Generics\ValueObjects\Proportion.cs" />
+    <Compile Include="Generics\ValueObjects\RegistrationNumber.cs" />
+    <Compile Include="Common\Professor\Professor.cs" />
+    <Compile Include="Contexts\Professor\Subjects.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Models\Student\GradeReport.cs" />
-    <Compile Include="Models\Student\Student.cs" />
-    <Compile Include="Models\Subject\EvaluationType.cs" />
-    <Compile Include="Models\Subject\Subject.cs" />
-    <Compile Include="Models\Subject\SubjectInformation.cs" />
-    <Compile Include="Models\Subject\SubjectSituation.cs" />
-    <Compile Include="Repositories\GradeReportRepository.cs" />
-    <Compile Include="Repositories\StudyYearRepository.cs" />
-    <Compile Include="Repositories\SubjectsRepository.cs" />
+    <Compile Include="Contexts\Student\GradeReport.cs" />
+    <Compile Include="Common\Student\Student.cs" />
+    <Compile Include="Common\Subject\EvaluationType.cs" />
+    <Compile Include="Common\Subject\Subject.cs" />
+    <Compile Include="Common\Subject\SubjectSituation.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

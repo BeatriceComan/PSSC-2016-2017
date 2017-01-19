@@ -5,6 +5,15 @@ VisualStudioVersion = 12.0.40629.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{45EFB7E7-7532-422B-9D4C-C9D89402758A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSSCUnitTesting", "PSSCUnitTesting\PSSCUnitTesting.csproj", "{72D3453E-B50B-45B7-8E1F-7EC92B0A1CBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{20EF3943-1D3C-4140-89A6-2D849AFEA283}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\packages.config = .nuget\packages.config
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApplication4", "WebApplication4\WebApplication4.csproj", "{6C6289E1-E297-43B2-AB65-1D76A45E896A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +24,14 @@ Global
 		{45EFB7E7-7532-422B-9D4C-C9D89402758A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45EFB7E7-7532-422B-9D4C-C9D89402758A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45EFB7E7-7532-422B-9D4C-C9D89402758A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72D3453E-B50B-45B7-8E1F-7EC92B0A1CBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72D3453E-B50B-45B7-8E1F-7EC92B0A1CBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72D3453E-B50B-45B7-8E1F-7EC92B0A1CBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72D3453E-B50B-45B7-8E1F-7EC92B0A1CBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C6289E1-E297-43B2-AB65-1D76A45E896A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6C6289E1-E297-43B2-AB65-1D76A45E896A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6C6289E1-E297-43B2-AB65-1D76A45E896A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C6289E1-E297-43B2-AB65-1D76A45E896A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
